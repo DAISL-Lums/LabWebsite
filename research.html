@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research · DAISL @ LUMS</title>
+  <meta name="description" content="Research areas of the Distributed and AI Systems Lab at LUMS.">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header: the same on every page. aria-current marks the open page. -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/favicon.svg" alt="" width="28" height="28">
+        <span>DAISL <span class="brand-sub">@ LUMS</span></span>
+      </a>
+      <nav aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="research.html" aria-current="page">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="news.html">News</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <div class="page-header">
+      <div class="wrap">
+        <h1>Research</h1>
+        <p class="lead">Our work sits where systems and machine learning meet. We build prototypes, measure them carefully, and share what we learn.</p>
+        <nav class="jump" aria-label="Research areas">
+          <a href="#distributed-systems">Distributed Systems</a>
+          <a href="#systems-for-ai">Systems for AI</a>
+          <a href="#ai-for-systems">AI for Systems</a>
+          <a href="#cloud-and-edge">Cloud and Edge</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- One <section class="section area"> per research area -->
+    <section class="section area" id="distributed-systems">
+      <div class="wrap split">
+        <div>
+          <span class="card-number">01</span>
+          <h2>Distributed Systems</h2>
+        </div>
+        <div>
+          <p>Most online services run on many machines that fail, slow down, and disagree. We design protocols and runtimes that keep these services correct and responsive anyway.</p>
+          <h3>Questions we ask</h3>
+          <ul class="bullets">
+            <li>How can replicas stay consistent without paying for it on every request?</li>
+            <li>How should a system detect and recover from partial failures?</li>
+            <li>How should work be scheduled when machines differ in speed?</li>
+          </ul>
+          <div class="project">
+            <p class="project-label">Current project</p>
+            <p class="paper-title">Project Name</p>
+            <p class="paper-meta">One or two sentences on the goal of the project and who is working on it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section area alt" id="systems-for-ai">
+      <div class="wrap split">
+        <div>
+          <span class="card-number">02</span>
+          <h2>Systems for AI</h2>
+        </div>
+        <div>
+          <p>Training and serving large models is expensive. We study the software stack underneath them to get more useful work from the same hardware.</p>
+          <h3>Questions we ask</h3>
+          <ul class="bullets">
+            <li>How can GPU clusters be shared fairly and kept busy?</li>
+            <li>How can model serving meet latency targets at lower cost?</li>
+            <li>Where do memory and network bottlenecks limit training?</li>
+          </ul>
+          <div class="project">
+            <p class="project-label">Current project</p>
+            <p class="paper-title">Project Name</p>
+            <p class="paper-meta">One or two sentences on the goal of the project and who is working on it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section area" id="ai-for-systems">
+      <div class="wrap split">
+        <div>
+          <span class="card-number">03</span>
+          <h2>AI for Systems</h2>
+        </div>
+        <div>
+          <p>Computer systems have more settings and failure modes than people can track by hand. We explore where learned models can help operators, and where they cannot be trusted.</p>
+          <h3>Questions we ask</h3>
+          <ul class="bullets">
+            <li>Can models tune system settings safely while the system is running?</li>
+            <li>Can they find the root cause of an outage from logs and metrics?</li>
+            <li>What guarantees are needed before automating a decision?</li>
+          </ul>
+          <div class="project">
+            <p class="project-label">Current project</p>
+            <p class="paper-title">Project Name</p>
+            <p class="paper-meta">One or two sentences on the goal of the project and who is working on it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section area alt" id="cloud-and-edge">
+      <div class="wrap split">
+        <div>
+          <span class="card-number">04</span>
+          <h2>Cloud and Edge</h2>
+        </div>
+        <div>
+          <p>Not every request should travel to a distant data center. We look at how to split computation between the cloud and devices closer to users.</p>
+          <h3>Questions we ask</h3>
+          <ul class="bullets">
+            <li>Which parts of an application belong at the edge?</li>
+            <li>How can models run well on devices with limited power and memory?</li>
+            <li>How should a system behave when the network is slow or unavailable?</li>
+          </ul>
+          <div class="project">
+            <p class="project-label">Current project</p>
+            <p class="paper-title">Project Name</p>
+            <p class="paper-meta">One or two sentences on the goal of the project and who is working on it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer: the same on every page -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <p class="footer-name">Distributed and AI Systems Lab</p>
+        <p>Department of Computer Science<br>
+           Syed Babar Ali School of Science and Engineering<br>
+           LUMS, DHA, Lahore Cantt 54792, Pakistan</p>
+      </div>
+      <ul>
+        <li><a href="mailto:contact@example.com">contact@example.com</a></li>
+        <li><a href="https://github.com/DAISL-Lums">GitHub</a></li>
+        <li><a href="https://lums.edu.pk">LUMS</a></li>
+      </ul>
+    </div>
+    <div class="wrap">
+      <p class="copyright">© 2026 DAISL @ LUMS</p>
+    </div>
+  </footer>
+</body>
+</html>

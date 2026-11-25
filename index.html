@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Distributed and AI Systems Lab @ LUMS</title>
+  <meta name="description" content="The Distributed and AI Systems Lab (DAISL) at LUMS researches distributed systems and the infrastructure behind modern AI.">
+  <meta property="og:title" content="Distributed and AI Systems Lab @ LUMS">
+  <meta property="og:description" content="Research on distributed systems and the infrastructure behind modern AI.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header: the same on every page. aria-current marks the open page. -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/favicon.svg" alt="" width="28" height="28">
+        <span>DAISL <span class="brand-sub">@ LUMS</span></span>
+      </a>
+      <nav aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="news.html">News</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ Hero ============ -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div>
+          <p class="eyebrow">Lahore University of Management Sciences</p>
+          <h1>Distributed and AI Systems Lab</h1>
+          <p class="lead">We study how to build computer systems that are fast, reliable, and efficient, with a focus on the infrastructure behind modern AI.</p>
+          <div class="actions">
+            <a class="button primary" href="research.html">Our research</a>
+          </div>
+        </div>
+
+        <!-- Decorative network graphic -->
+        <svg class="network" viewBox="0 0 400 360" aria-hidden="true" focusable="false">
+          <g class="edges">
+            <path d="M200 180 L90 90 L210 50 L320 105 L200 180 L345 230 L260 310 L200 180 L110 285 L50 195 L200 180"/>
+            <path d="M90 90 L50 195 M210 50 L200 180 M320 105 L345 230 M110 285 L260 310"/>
+          </g>
+          <g class="signals">
+            <path d="M90 90 L200 180 L345 230"/>
+            <path d="M110 285 L200 180 L320 105"/>
+          </g>
+          <g class="nodes">
+            <circle cx="90" cy="90" r="9"/>
+            <circle cx="210" cy="50" r="6"/>
+            <circle cx="320" cy="105" r="11"/>
+            <circle cx="345" cy="230" r="7"/>
+            <circle cx="260" cy="310" r="9"/>
+            <circle cx="110" cy="285" r="11"/>
+            <circle cx="50" cy="195" r="6"/>
+          </g>
+          <circle class="halo" cx="200" cy="180" r="30"/>
+          <circle class="hub" cx="200" cy="180" r="16"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============ Research overview ============ -->
+    <section class="section alt">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>What we work on</h2>
+          <a href="research.html">All research →</a>
+        </div>
+
+        <div class="cards">
+          <a class="card" href="research.html#distributed-systems">
+            <span class="card-number">01</span>
+            <h3>Distributed Systems</h3>
+            <p>Consistency, fault tolerance, and scheduling for services that run across many machines.</p>
+          </a>
+          <a class="card" href="research.html#systems-for-ai">
+            <span class="card-number">02</span>
+            <h3>Systems for AI</h3>
+            <p>Faster and cheaper training and inference, from GPU clusters to model serving.</p>
+          </a>
+          <a class="card" href="research.html#ai-for-systems">
+            <span class="card-number">03</span>
+            <h3>AI for Systems</h3>
+            <p>Using learned models to tune, debug, and manage complex computing infrastructure.</p>
+          </a>
+          <a class="card" href="research.html#cloud-and-edge">
+            <span class="card-number">04</span>
+            <h3>Cloud and Edge</h3>
+            <p>Placing computation close to users and data, even when resources are limited.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Latest ============ -->
+    <section class="section">
+      <div class="wrap columns">
+        <!-- Keep this short: copy the newest items from news.html -->
+        <div>
+          <div class="section-head">
+            <h2>Latest news</h2>
+            <a href="news.html">All news →</a>
+          </div>
+          <ul class="brief">
+            <li>
+              <time datetime="2026-11">Nov 2026</time>
+              <p>Our lab website is online.</p>
+            </li>
+            <li>
+              <time datetime="2026-10">Oct 2026</time>
+              <p>Example: a paper from the lab was accepted at Conference Name.</p>
+            </li>
+            <li>
+              <time datetime="2026-09">Sep 2026</time>
+              <p>Example: welcome to the students joining us this semester.</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Keep this short: copy the newest papers from publications.html -->
+        <div>
+          <div class="section-head">
+            <h2>Recent papers</h2>
+            <a href="publications.html">All papers →</a>
+          </div>
+          <ul class="brief">
+            <li>
+              <p class="paper-title">Title of Your First Paper Goes Here</p>
+              <p class="paper-meta">Author One, Author Two, Author Three · <em>Conference Name</em></p>
+            </li>
+            <li>
+              <p class="paper-title">Title of Your Second Paper Goes Here</p>
+              <p class="paper-meta">Author One, Author Two · <em>Journal Name</em></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer: the same on every page -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <p class="footer-name">Distributed and AI Systems Lab</p>
+        <p>Department of Computer Science<br>
+           Syed Babar Ali School of Science and Engineering<br>
+           LUMS, DHA, Lahore Cantt 54792, Pakistan</p>
+      </div>
+      <ul>
+        <li><a href="mailto:contact@example.com">contact@example.com</a></li>
+        <li><a href="https://github.com/DAISL-Lums">GitHub</a></li>
+        <li><a href="https://lums.edu.pk">LUMS</a></li>
+      </ul>
+    </div>
+    <div class="wrap">
+      <p class="copyright">© 2026 DAISL @ LUMS</p>
+    </div>
+  </footer>
+</body>
+</html>
