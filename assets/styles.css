@@ -19,19 +19,18 @@
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0d1321;
-    --bg-alt: #121a2b;
-    --surface: #172136;
-    --text: #e9ecf3;
-    --muted: #a4adc1;
-    --line: #27324a;
-    --accent: #5ccfc4;
-    --accent-soft: #163a41;
-    --on-accent: #07201e;
-    color-scheme: dark;
-  }
+/* Dark colors, used when the visitor picks them with the header button */
+:root[data-theme="dark"] {
+  --bg: #0d1321;
+  --bg-alt: #121a2b;
+  --surface: #172136;
+  --text: #e9ecf3;
+  --muted: #a4adc1;
+  --line: #27324a;
+  --accent: #5ccfc4;
+  --accent-soft: #163a41;
+  --on-accent: #07201e;
+  color-scheme: dark;
 }
 
 /* ---------- Base ---------- */
@@ -86,13 +85,30 @@ img { max-width: 100%; }
   white-space: nowrap;
 }
 .brand-sub { color: var(--muted); font-weight: 400; }
-.site-header nav { display: flex; gap: 1.75rem; }
+.site-header nav { display: flex; gap: 1.75rem; margin-left: auto; }
 .site-header nav a {
   color: var(--muted); text-decoration: none; font-size: 0.93rem; font-weight: 500;
   border-bottom: 2px solid transparent;
 }
 .site-header nav a:hover { color: var(--text); }
 .site-header nav a[aria-current="page"] { color: var(--text); border-bottom-color: var(--accent); }
+
+.theme-toggle {
+  flex: none; width: 36px; height: 36px; border-radius: 50%;
+  display: grid; place-items: center; cursor: pointer;
+  background: transparent; border: 1px solid var(--line); color: var(--text);
+  transition: border-color 0.2s;
+}
+.theme-toggle[hidden] { display: none; }
+.theme-toggle:hover { border-color: var(--accent); }
+.theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.theme-toggle svg {
+  width: 18px; height: 18px; fill: none; stroke: currentColor;
+  stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+}
+.theme-toggle .icon-sun,
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
 
 /* ---------- Hero ---------- */
 .hero { padding: clamp(3.5rem, 9vw, 7rem) 0; }
@@ -261,8 +277,10 @@ details p { margin-top: 0.4rem; max-width: 44rem; }
 /* ---------- Small screens ---------- */
 @media (max-width: 760px) {
   html { scroll-padding-top: 84px; }
-  .header-inner { flex-direction: column; align-items: flex-start; gap: 0.4rem; padding-block: 0.75rem; }
-  .site-header nav { width: 100%; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 0.75rem; }
+  .header-inner { flex-wrap: wrap; gap: 0.4rem 1rem; padding-block: 0.6rem; }
+  .theme-toggle { margin-left: auto; width: 32px; height: 32px; }
+  /* the menu drops to its own row under the name and button */
+  .site-header nav { order: 1; width: 100%; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 0.5rem; }
   .hero-inner, .columns, .split { grid-template-columns: 1fr; }
   .network { max-width: 300px; justify-self: center; }
   .year, .news li { grid-template-columns: 1fr; gap: 0.4rem; }

@@ -1,6 +1,7 @@
 # Distributed and AI Systems Lab @ LUMS
 
-The lab website. It is plain HTML and CSS: no build step and nothing to install.
+The lab website. It is plain HTML and CSS with one small script: no build step
+and nothing to install.
 
 ```
 index.html          home page
@@ -9,8 +10,12 @@ people.html         faculty, students, and alumni
 publications.html   papers by year
 news.html           announcements
 assets/styles.css   colors, fonts, and layout
+assets/theme.js     light and dark mode toggle
 assets/favicon.svg  browser tab icon and header logo
 ```
+
+The site opens in light mode. The header button switches to dark mode, and the
+browser remembers the visitor's choice.
 
 ## Preview
 
@@ -27,7 +32,7 @@ between the pages.
 | Students         | In `people.html`, copy an `<li>` in a `<ul class="people">`                             |
 | Publications     | In `publications.html`, add an `<li>` under the year, or copy a `<div class="year">`    |
 | News             | In `news.html`, add an `<li>` at the top of the list                                    |
-| Colors and fonts | Edit the variables at the top of `assets/styles.css`                                    |
+| Colors and fonts | Edit the variables at the top of `assets/styles.css` (light and dark have their own)    |
 
 The home page shows the latest news and papers. Update those short lists in
 `index.html` when you add new items.
